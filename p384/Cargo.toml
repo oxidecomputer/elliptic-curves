@@ -12,8 +12,8 @@ categories = ["cryptography", "no-std"]
 keywords = ["crypto", "ecc", "nist", "secp384r1"]
 
 [dependencies]
-ecdsa = { version = "0.10", optional = true, default-features = false }
-elliptic-curve = { version = "0.8", default-features = false }
+ecdsa = { git = "https://github.com/oxidecomputer/RustCrypto_signatures.git", branch = "oxide_branch", optional = true, default-features = false }
+elliptic-curve = { git = "https://github.com/oxidecomputer/RustCrypto_traits.git", branch = "oxide_branch", default-features = false }
 sha2 = { version = "0.9", optional = true, default-features = false }
 
 [features]

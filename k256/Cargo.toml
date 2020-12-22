@@ -18,15 +18,15 @@ keywords = ["bitcoin", "crypto", "ecc", "ethereum", "secp256k1"]
 
 [dependencies]
 cfg-if = "1.0"
-ecdsa-core = { version = "0.10", package = "ecdsa", optional = true, default-features = false }
-elliptic-curve = { version = "0.8", default-features = false }
+ecdsa-core = { git = "https://github.com/oxidecomputer/RustCrypto_signatures.git", branch = "oxide_branch", package = "ecdsa", optional = true, default-features = false }
+elliptic-curve = { git = "https://github.com/oxidecomputer/RustCrypto_traits.git", branch = "oxide_branch", default-features = false }
 hex-literal = { version = "0.3", optional = true }
 sha2 = { version = "0.9", optional = true, default-features = false }
 sha3 = { version = "0.9", optional = true, default-features = false }
 
 [dev-dependencies]
 criterion = "0.3"
-ecdsa-core = { version = "0.10", package = "ecdsa", default-features = false, features = ["dev"] }
+ecdsa-core = { git = "https://github.com/oxidecomputer/RustCrypto_signatures.git", branch = "oxide_branch", package = "ecdsa", optional = true, default-features = false }
 hex-literal = "0.3"
 num-bigint = "0.3"
 num-traits = "0.2"
